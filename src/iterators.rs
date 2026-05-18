@@ -3,7 +3,8 @@
 fn iterate_thru_loops() {
     let vec = vec![1, 2, 3];
 
-    for i in vec { // under the hood, this is using into_iter()
+    for i in vec {
+        // under the hood, this is using into_iter()
         println!("{}", i);
     }
     // print!("{:?}",vec); //error: ownership of vec is moved to the loop, so we cannot use it after the loop
@@ -40,6 +41,11 @@ pub fn iterate_using_next() {
     let vec = vec![1, 2, 3];
     let mut iter = vec.iter();
 
+    // let first_num = iter.next();
+    // let second = iter.next();
+    // let third = iter.next();
+    // let fourth = iter.next(); //none
+
     while let Some(val) = iter.next() {
         println!("iterate_using_next {}", val)
     }
@@ -49,7 +55,7 @@ pub fn iterate_using_next() {
 
 pub fn iterate_using_into_iter() {
     let vec = vec![1, 2, 3];
-    let  iter = vec.into_iter();
+    let iter = vec.into_iter();
 
     for i in iter {
         print!("{}", i);
