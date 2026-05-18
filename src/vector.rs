@@ -1,11 +1,13 @@
-pub fn even_filter(vec: &Vec<i32>) -> Vec<i32> {
-    let mut new_vec = Vec::new();
-
+pub fn even_filter(vec: &Vec<i32>) {
     for val in vec {
         if val % 2 == 0 {
-            new_vec.push(*val);
+            println!("Even value: {}", val);
         }
     }
+}
 
-    new_vec
+//initialising a vector using the vec! macro
+pub fn init_vector() {
+    let vec = vec![1, 2, 3];
+    println!("{:?}", vec);
 }
