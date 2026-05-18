@@ -1,6 +1,7 @@
 mod vector;
 mod hashmaps;
 mod iterators;
+mod ownership;
 
 use vector::even_filter;
 
@@ -22,4 +23,8 @@ fn main() {
     iterators::iterate_thru_iterators();
     iterators::iterate_thru_iterator_mut();
     iterators::iterate_using_next();
+
+    //-----------------------
+    ownership::direct_ownership();
+    ownership::ownership_in_functions();
 }
